@@ -1,16 +1,14 @@
 #ifndef UI_TASK_H
 #define UI_TASK_H
 
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/queue.h"
-#include "sensor_task.h"
-#include "motor_task.h"
+#include "bsp_config.h"
 
-// Colas/flags externos (definidos en otros módulos)
-//extern QueueHandle_t cola_sensores;
-extern volatile bool motor_run;
-
+/**
+ * @brief Tarea de Interfaz Local (Pantalla ST7789 + Encoder Rotatorio + Botón START).
+ *        Renderiza en 4 zonas (Estado, Matriz de 6 Sensores Autodetectados S1..S6,
+ *        Consignas de Frecuencia/Amplitud/Duración y Telemetría PGA) usando un
+ *        buffer parcial en DMA de solo 9.6 KB en lugar de 115 KB.
+ */
 void ui_task(void *arg);
 
-#endif
+#endif // UI_TASK_H

@@ -8,6 +8,9 @@
 #include "driver/spi_master.h"
 #include "driver/uart.h"
 
+#define FIRMWARE_VERSION_STRING  "3.4.52"
+#define FIRMWARE_BUILD_DATE      "2026-11-07"
+
 /**
  * ============================================================================
  * 1. PINOUT ETAPA DE POTENCIA — MOTOR NEMA 23 + DRIVER DM856

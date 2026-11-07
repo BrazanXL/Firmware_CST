@@ -64,7 +64,7 @@ void buzzer_beep(uint8_t count, uint16_t duration_ms, uint16_t pause_ms) {
 }
 
 void app_main(void) {
-    ESP_LOGI(TAG, "=== Iniciando Firmware Mesa Sísmica CUC (ESP-IDF + FreeRTOS) ===");
+    ESP_LOGI(TAG, "=== Iniciando Firmware Mesa Sísmica CUC v%s (ESP-IDF + FreeRTOS) ===", FIRMWARE_VERSION_STRING);
 
     // Configurar pin del Buzzer
     gpio_reset_pin(PIN_BUZZER);
